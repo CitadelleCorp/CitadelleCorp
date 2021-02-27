@@ -1,49 +1,103 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <link rel="canonical" href="https://citadellecorp.github.io/CitadelleCorp/" />
-    <title>Citadelle</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+<html >
   
-<body id="top" onselectstart="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status='Il est strictement interdit de copier les images sur ce site'; return true;">
-    <header>
-       <div class="links">
-    <!--<nav><ul><li>-->
-          <a href="AR.html">AR</a>
-    <!--</li></ul></nav>-->
-       </div>
-    </header>
-<main>
- <div id="container">
+<head>
+  <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+  <link href="style.css" 
+        rel="stylesheet">
+  <link rel="preload" 
+        href="https://cdn.glitch.com/5d6ac67f-93c6-4ebf-8c5b-733780b672fd%2Fcitadelle_particles.mp4?v=1601546874123" 
+        as="video" 
+        type="video/mp4">
+  <style>
+    #slideSource {
+      opacity: 1;
+      transition: opacity 1s; 
+    }
 
-  <div class="index-mots">
-      <p>Synergie</p>
-      <p>Autorité</p>
-      <p>Scientisme</p>
-      <p>Synergie</p>
-      <p>Pseudes</p>
-      <p>Manipulation</p>
-      <p>Expérience</p>
-      <p>Agentique</p>
-      <p>Synchronisation</p>
-      <p>Flux</p>
-      <p>Légitimité</p>
-      <p>Émergence</p>
-      <p>Motif</p>
-      <p>Protocole</p>
-      <p>Milieu</p>
-      <p>Agent</p>
-      <p>Données</p>
-      <p>Multimédia</p>
-      <p>Médias de masse</p>
-  </div>  
-   
+    #slideSource.fade {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .cursor {
+      cursor: url('https://cdn.glitch.com/5d6ac67f-93c6-4ebf-8c5b-733780b672fd%2Fcursor.png?v=1601547478994), auto;	
+    }
+  </style>
+  <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
+</head>
+
+<body class="body" style="background-color:#ffffff;">
+  
+    <div class="cursor">
+    <svg version="1.1" 
+         id="Calque_1" 
+         xmlns="http://www.w3.org/2000/svg" 
+         xmlns:xlink="http://www.w3.org/1999/xlink" 
+         x="0px" 
+         y="0px"
+         viewbox="0 0 25 21.95" 
+         style="enable-background:new 0 0 25 21.95;" 
+         xml:space="preserve">
+      <g>
+        <path class="st0" 
+              d="M18.2,21.95H6.8c-0.39,0-0.76-0.21-0.96-0.55l-5.7-9.87c-0.2-0.34-0.2-0.76,0-1.1l5.7-9.87
+          C6.04,0.21,6.41,0,6.8,0h11.4c0.39,0,0.76,0.21,0.96,0.55l5.7,9.87c0.2,0.34,0.2,0.76,0,1.1l-5.7,9.87
+          C18.96,21.74,18.59,21.95,18.2,21.95z M7.44,19.74h10.12l5.06-8.77l-5.06-8.77H7.44l-5.06,8.77L7.44,19.74z"/>
+      </g>
+    </svg>
+
+    </div>
+  
+  <div id="handle"
+       style="height:100%;
+              width:100%;
+              opacity: 0;
+              background-color: #ff6f61; 
+              position: absolute;
+              top: 50%; 
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 2" > 
   </div>
-  </main>
-</body>
-</html>
 
+
+      <video id="slideSource"
+             autoplay
+             muted
+             loop
+             style="position: fixed; 
+                    left: 50%; 
+                    top: 50%;
+                    width: 100%;
+                    transform: translate(-50%, -50%);
+                    background-size: cover;
+                    z-index: 0;">
+      
+      <source src="https://cdn.glitch.com/5d6ac67f-93c6-4ebf-8c5b-733780b672fd%2Fintro_citadelle.webm?v=1601721262589"
+            type="video/webm">
+      <source src="https://cdn.glitch.com/5d6ac67f-93c6-4ebf-8c5b-733780b672fd%2Fintro_citadelle.mp4?v=1601721302724"
+          type="video/mp4">
+        
+      Sorry, your browser doesn't support embedded videos.
+      
+      </video>
+  
+  <div>
+    <p>
+      Bienvenue dans Citadelle.
+    </p>
+  </div>
+  
+  <script src="cursor.js"></script>
+</body>
+  
+  <script type="text/javascript">
+      var slideSource = document.getElementById('slideSource');
+      document.getElementById('handle').onclick = function () {
+        slideSource.classList.toggle('fade');
+      document.getElementById('handle').style.display = "none";
+      }
+    </script>
+  
+</html>
