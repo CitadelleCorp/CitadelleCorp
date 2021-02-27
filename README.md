@@ -1,4 +1,9 @@
-### Hi there 👋
+Citadelle - Official website of the nicest evil corp on earth right now
+Currently having fun with your DNA and your personnal data
+Not at all based in Paris
+Not one second 3 young digital designers
+Analog/digital blending
+Living Organisms + Robotics + unrealistic expectations = us
 
 <!--
 **CitadelleCorp/CitadelleCorp** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
