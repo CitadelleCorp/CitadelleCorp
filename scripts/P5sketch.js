@@ -3,31 +3,69 @@ var canvas;
 let objs = [];
 let objsNum = 1200;
 let MAX;
+let pMAX;
 const palette = ["#ff6f61","#ff6f61","#ff6f61","#ff6f61"];
-let maximumSize = 0.3;
+let maximumSize = 0.4;
 let rotSpeedValue = 3;
 let startingSpeed = 0.03;
-let minSpeed = 80;
-let maxSpeed = 800;
+let _minSpeed = 20;
+let _maxSpeed = 80;
+let minSpeed;
+let maxSpeed;
+let pminSpeed;
+let pmaxSpeed;
 let hexSize = 0.2;
 let tooFar;
+let longerSide;
+
 
 function setup() {
     frameRate(30);
     canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-    tooFar = windowWidth * 0.7;
+    canvas.position(0, 0);
+    canvas.style("z-index", "20");
+
+    longerSide = max(width, height);
+    tooFar = longerSide * 0.7;
+    MAX = min(width, height) * hexSize;
+    pMAX = MAX;
+    minSpeed = longerSide*_minSpeed/100;
+    maxSpeed = longerSide*_maxSpeed/100;
+    pminSpeed = minSpeed;
+    pmaxSpeed = maxSpeed;
+
   angleMode(DEGREES);
   // noStroke();
 	stroke(255);
-  MAX = min(width, height) * hexSize;
+  
 
   for (let i = 0; i < objsNum; i++) {
     objs.push(new Obj());
   }
 }
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    tooFar = longerSide * 0.7;
+    MAX = min(width, height) * hexSize;
+    longerSide = max(width, height);
+    console.log("longer side = "+longerSide);
+
+    minSpeed = longerSide*_minSpeed/100;
+    maxSpeed = longerSide*_maxSpeed/100;
+
+
+    for (let i = 0; i < objs.length; i++) {
+        objs[i].speed = map(objs[i].speed, pminSpeed, pmaxSpeed, minSpeed, maxSpeed);
+        objs[i].sMax = map(objs[i].sMax, pMAX * 0, pMAX * maximumSize, MAX * 0, MAX * maximumSize);
+    }
+    pminSpeed = minSpeed;
+    pmaxSpeed = maxSpeed;
+    pMAX = MAX;
+}
+
 function draw() {
-  background("#000000");
+  background("#070707");
 
   lights();
   ambientLight(100);
@@ -54,6 +92,11 @@ class Obj {
   }
 
   move() {
+
+    if (this.r < MAX) {
+        this.r = MAX;
+    }
+
     this.rot.add(this.rotSpeed);
     this.s = map(sqrt(this.r), sqrt(tooFar), sqrt(MAX), this.sMax, 0);
     this.currentSpeed = map(sq(sq(this.r)), sq(sq(MAX)), sq(sq(tooFar)), startingSpeed, this.speed);
@@ -97,3 +140,5 @@ function func(t, num) {
 
   return A / B;
 }
+
+
