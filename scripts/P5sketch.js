@@ -1,12 +1,18 @@
 var canvas;
 
 let objs = [];
-let objsNum = 1200;
+let objsNum;
+let objsNumDesktop = 600;
+let objsNumMobile = 200;
 let MAX;
 let pMAX;
 const palette = ["#ff6f61","#ff6f61","#ff6f61","#ff6f61"];
-let maximumSize = 0.4;
-let rotSpeedValue = 3;
+
+let maximumSize;
+let maximumSizeDesktop = 0.4;
+let maximumSizeMobile = 1;
+
+let rotSpeedValue = 6;
 let startingSpeed = 0.03;
 let _minSpeed = 20;
 let _maxSpeed = 80;
@@ -17,13 +23,25 @@ let pmaxSpeed;
 let hexSize = 0.2;
 let tooFar;
 let longerSide;
+let sphereShape = 2;
 
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
 
 function setup() {
     frameRate(30);
     canvas = createCanvas(windowWidth, windowHeight, WEBGL);
     canvas.position(0, 0);
     canvas.style("z-index", "20");
+
+    if(isMobileDevice() == true){
+      objsNum = objsNumMobile;
+      maximumSize = maximumSizeMobile;
+    } else {
+      objsNum = objsNumDesktop;
+      maximumSize = maximumSizeDesktop;
+    }
 
     longerSide = max(width, height);
     tooFar = longerSide * 0.7;
@@ -65,7 +83,8 @@ function windowResized() {
 }
 
 function draw() {
-  background("#070707");
+  //background("#070707");
+  background(255);
 
   lights();
   ambientLight(100);
@@ -120,7 +139,7 @@ class Obj {
     //noFill();
     //stroke(this.c);
     strokeWeight(2);
-    sphere(this.s, 3, 3);
+    sphere(this.s, 3, 2);
     pop();
   }
 }
