@@ -2,15 +2,15 @@ var canvas;
 
 let objs = [];
 let objsNum;
-let objsNumDesktop = 600;
-let objsNumMobile = 200;
+let objsNumDesktop = 800;
+let objsNumMobile = 170;
 let MAX;
 let pMAX;
 const palette = ["#ff6f61","#ff6f61","#ff6f61","#ff6f61"];
 
 let maximumSize;
 let maximumSizeDesktop = 0.4;
-let maximumSizeMobile = 1;
+let maximumSizeMobile = 0.8;
 
 let rotSpeedValue = 6;
 let startingSpeed = 0.03;
@@ -25,6 +25,10 @@ let tooFar;
 let longerSide;
 let sphereShape = 2;
 
+let removeFadingTime = 2; // en secondes
+let startingCountdown = false;
+let removeCountdown = removeFadingTime * 30 * 2; // removeFadingTime * frameRate * sécurité
+
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
@@ -34,6 +38,7 @@ function setup() {
     canvas = createCanvas(windowWidth, windowHeight, WEBGL);
     canvas.position(0, 0);
     canvas.style("z-index", "20");
+    canvas.id('canvas');
 
     if(isMobileDevice() == true){
       objsNum = objsNumMobile;
@@ -94,7 +99,14 @@ function draw() {
     objs[i].move();
     objs[i].display();
   }
+  if(startingCountdown == true){
+    removeCountdown --;
+    if(removeCountdown <= 0){
+      canvas.remove();
+    }
+  }
 }
+
 
 class Obj {
   constructor() {
@@ -158,6 +170,22 @@ function func(t, num) {
   let B = cos(b * (t / b - floor(t / b)) - 180 / num);
 
   return A / B;
+}
+
+
+
+function mouseClicked(){
+  shutDown();
+}
+function touchEnded(){
+  shutDown();
+}
+
+function shutDown() {
+  canvas.style("transition-property", "opacity");
+  canvas.style("transition-duration", removeFadingTime+"s");
+  canvas.style("opacity", 0);
+  startingCountdown = true;
 }
 
 

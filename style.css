@@ -1,6 +1,6 @@
 .index-mots{
   column-count:6;
-  margin-top, margin-bottom:30px;
+  margin: 30px;
 }
 
 .links{
@@ -10,17 +10,24 @@
   border: 3px thin black;
   padding: 30px;
 }
- #slideSource {
-      opacity: 1;
-      transition: opacity 1s; 
-    }
-    #slideSource.fade {
-      opacity: 0;
-      transition: opacity 1s;
-    }
-    .cursor {
-      cursor: url('medias/curseur.png'), auto;	
-    }
+
+#canvas.fade {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+
+#slideSource {
+  opacity: 1;
+  transition: opacity 1s; 
+}
+#slideSource.fade {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.cursor {
+  cursor: url('medias/curseur.png'), auto;	
+}
 
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co
