@@ -185,6 +185,8 @@ function shutDown() {
   canvas.style("transition-property", "opacity");
   canvas.style("transition-duration", removeFadingTime+"s");
   canvas.style("opacity", 0);
+  let body = select('#body');
+  body.style("overflow", 'scroll');
   startingCountdown = true;
 }
 
