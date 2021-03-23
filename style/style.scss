@@ -1,0 +1,91 @@
+
+$corail : #FF6F61;
+$gritadelle : #EEEEEE;
+
+
+.navbar-citadelle{
+    font-size: 2.5rem !important;
+    font-weight: 200;
+    padding-left: 2rem;
+    //text-align: center;
+}
+.navbar-citadelle-bg{
+    background: linear-gradient(rgba(white, 1), rgba(white, 0));
+    padding-bottom : 4rem;
+}
+
+body {
+
+    font-family: Aileron, sans-serif;
+    font-weight: normal;
+
+    margin-top : 6rem;
+
+    main {
+        padding-top: 3rem;
+        .custom-container{
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        .column-div{
+            padding: 1rem;
+            //margin-left: 0.25rem;
+            //margin-right: 0.25rem;
+            //background-color: $gritadelle;
+            //border-top: solid $corail;
+        }
+        .bottom-line-corail{
+            border-bottom: solid $corail;
+            border-width: 0.1rem;
+        }
+        .titre-citadelle {
+            font-size: 1.8rem;
+            font-weight: 200;
+        }
+        .mot-citadelle{
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+        .sous-titre-citadelle{
+            font-size: 2rem;
+            font-weight: 100;
+        }
+        .texte-citadelle{
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+        .texte-corail{
+            color: $corail;
+        }
+        .texte-fond-corail{
+            background-color: $corail;
+            //color: white;
+            padding-left: 0.15rem;
+            padding-right: 0.15rem;
+        }
+        
+    }
+    
+}
+
+
+
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 70em) { @content ; }
+   }
+    @else if $point == laptop {
+      @media (min-width: 64em) { @content ; }
+   }
+    @else if $point == tablet {
+      @media (min-width: 50em) { @content ; }
+   }
+    @else if $point == mobileonly {
+      @media (max-width: 37.5em)  { @content ; }
+ 
+   }
+ }
+
+
+

@@ -25,7 +25,7 @@ let tooFar;
 let longerSide;
 let sphereShape = 2;
 
-let removeFadingTime = 2; // en secondes
+let removeFadingTime = 3; // en secondes
 let startingCountdown = false;
 let removeCountdown = removeFadingTime * 30 * 2; // removeFadingTime * frameRate * sécurité
 
@@ -37,7 +37,7 @@ function setup() {
     frameRate(30);
     canvas = createCanvas(windowWidth, windowHeight, WEBGL);
     canvas.position(0, 0);
-    canvas.style("z-index", "20");
+    canvas.style("z-index", "5000");
     canvas.id('canvas');
 
     if(isMobileDevice() == true){

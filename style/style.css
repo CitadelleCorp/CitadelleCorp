@@ -1,0 +1,66 @@
+.navbar-citadelle {
+  font-size: 2.5rem !important;
+  font-weight: 200;
+  padding-left: 2rem;
+}
+
+.navbar-citadelle-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(white, rgba(255, 255, 255, 0));
+  padding-bottom: 4rem;
+}
+
+body {
+  font-family: Aileron, sans-serif;
+  font-weight: normal;
+  margin-top: 6rem;
+}
+
+body main {
+  padding-top: 3rem;
+}
+
+body main .custom-container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+body main .column-div {
+  padding: 1rem;
+}
+
+body main .bottom-line-corail {
+  border-bottom: solid #FF6F61;
+  border-width: 0.1rem;
+}
+
+body main .titre-citadelle {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+body main .mot-citadelle {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+body main .sous-titre-citadelle {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+body main .texte-citadelle {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+body main .texte-corail {
+  color: #FF6F61;
+}
+
+body main .texte-fond-corail {
+  background-color: #FF6F61;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+}
+/*# sourceMappingURL=style.css.map */

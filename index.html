@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
   
 <head>
   <meta charset="utf-8">
@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <link rel="canonical" href="https://citadellecorp.github.io/CitadelleCorp/" />
     <title>Citadelle</title>
-  <link href="style.css"  rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="style/style.css"  rel="stylesheet">
+
   <link rel="preload" href="medias/hexa_citadelle.mp4" as="video" type="video/mp4">
   <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
   <!-- <script src="/libraries/P5/p5.js"></script> -->
@@ -15,10 +17,10 @@
   <script src="scripts/P5sketch.js"></script>
 </head>
 
-<body class="body" style="background-color:#ffffff;"onselectstart="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status='Il est strictement interdit de copier les images sur ce site'; return true;">
-  
-    <div class="cursor">
-    <!-- <svg version="1.1" 
+<!-- <body class="body" style="background-color:#ffffff;"onselectstart="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status='Il est strictement interdit de copier les images sur ce site'; return true;"> -->
+<body>
+    <!-- <div class="cursor">
+    <svg version="1.1" 
          id="Calque_1" 
          xmlns="http://www.w3.org/2000/svg" 
          xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -33,10 +35,10 @@
           C6.04,0.21,6.41,0,6.8,0h11.4c0.39,0,0.76,0.21,0.96,0.55l5.7,9.87c0.2,0.34,0.2,0.76,0,1.1l-5.7,9.87
           C18.96,21.74,18.59,21.95,18.2,21.95z M7.44,19.74h10.12l5.06-8.77l-5.06-8.77H7.44l-5.06,8.77L7.44,19.74z"/>
       </g>
-    </svg> -->
-    </div>
+    </svg>
+    </div> -->
   
-  <div id="handle"
+  <!-- <div id="handle"
        style="height:100%;
               width:100%;
               opacity: 0;
@@ -46,7 +48,7 @@
               left: 50%;
               transform: translate(-50%, -50%);
               z-index: 2" > 
-  </div>
+  </div> -->
 
 
       <!-- <video id="slideSource"
@@ -70,16 +72,12 @@
       
       </video> -->
 
-  <div>
-    <p>
-      Bienvenue dans Citadelle.
-    </p>
-  </div>
+  
   
   <!-- <script src="cursor.js"></script> -->
-</body>
+
   
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
   /*
     var slideSource = document.getElementById('canvas').onclick = function () {
       slideSource.toggle('fade');
@@ -91,43 +89,150 @@
       document.getElementById('canvas').style.display = "none";
     }
     */
-    </script>
+    </script> -->
   
   
-<header>
-       <div class="links">
+  <header>
+       <!-- <div class="links">   -->
     <!--<nav><ul><li>-->
-          <a href="AR.html">AR</a>
+          <!-- <a href="AR.html">AR</a> -->
     <!--</li></ul></nav>-->
-       </div>
-    </header>
-<main>
- <div id="container">
+       <!-- </div> -->
+       <nav class="navbar fixed-top navbar-light navbar-citadelle-bg">
+        <a class="navbar-brand navbar-citadelle" href="#">Citadelle</a>
+      </nav>
 
-  <div class="index-mots">
-      <p>Synergie</p>
-      <p>Autorité</p>
-      <p>Scientisme</p>
-      <p>Synergie</p>
-      <p>Pseudes</p>
-      <p>Manipulation</p>
-      <p>Expérience</p>
-      <p>Agentique</p>
-      <p>Synchronisation</p>
-      <p>Flux</p>
-      <p>Légitimité</p>
-      <p>Émergence</p>
-      <p>Motif</p>
-      <p>Protocole</p>
-      <p>Milieu</p>
-      <p>Agent</p>
-      <p>Données</p>
-      <p>Multimédia</p>
-      <p>Médias de masse</p>
-  </div>  
-   
-  </div>
+  </header>
+
+  <main>
+    <div class="container-fluid custom-container">
+      <div class="row">
+
+        <div class="col-md order-lg-12 column-div">
+          <img src="medias/CNRS_20170060_0001-1.jpg" class="img-fluid">
+          </img>
+          <p class="sous-titre-citadelle">
+            Nous nous intéressons à la <span class="texte-corail">vie</span>, aux <span class="texte-corail">organismes vivants</span>, aux <span class="texte-corail">écosystèmes</span> et à <span class="texte-corail">l'hybridation</span>.
+          </p>
+
+        </div>
+        <div class="column-div col-md">
+          <p class="titre-citadelle bottom-line-corail">
+            Pseudo-sciences
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Synergie
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Autorité
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Scientisme
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Synchronisation
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Médias de masse
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Multimédia
+          </p>
+          
+        </div>
+        <div class="column-div col-md">
+          <p class="titre-citadelle bottom-line-corail">
+            Vyvant
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Pseudes
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Manipulation
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Expérience
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Agentique
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Légitimité
+          </p>
+        </div>
+        
+        <div class="column-div col-md">
+          <p class="titre-citadelle bottom-line-corail">
+            Modifier le vivant
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Flux
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Émergence
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Motif
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Milieu
+          </p>
+        </div>
+        <div class="column-div col-md">
+          <p class="titre-citadelle bottom-line-corail">
+            Créer le vivant
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Protocole
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Agent
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Milieu
+          </p>
+          <p class="mot-citadelle bottom-line-corail">
+            Données
+          </p>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <!-- <div id="container">
+      <div class="index-mots">
+        <p>Synergie</p>
+        <p>Autorité</p>
+        <p>Scientisme</p>
+        <p>Synergie</p>
+        <p>Pseudes</p>
+        <p>Manipulation</p>
+        <p>Expérience</p>
+        <p>Agentique</p>
+        <p>Synchronisation</p>
+        <p>Flux</p>
+        <p>Légitimité</p>
+        <p>Émergence</p>
+        <p>Motif</p>
+        <p>Protocole</p>
+        <p>Milieu</p>
+        <p>Agent</p>
+        <p>Données</p>
+        <p>Multimédia</p>
+        <p>Médias de masse</p>
+      </div>  
+    </div> -->
+
+    <footer>
+
+    </footer>
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
   
