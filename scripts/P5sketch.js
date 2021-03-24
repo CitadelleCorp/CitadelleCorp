@@ -25,9 +25,9 @@ let tooFar;
 let longerSide;
 let sphereShape = 2;
 
-let removeFadingTime = 3; // en secondes
+let removeFadingTime = 1; // en secondes
 let startingCountdown = false;
-let removeCountdown = removeFadingTime * 30; // removeFadingTime * frameRate * sécurité
+let removeCountdown = removeFadingTime * 30 * 1.1; // removeFadingTime * frameRate * sécurité
 
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
