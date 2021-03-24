@@ -75,11 +75,11 @@ body {
             transition: background-color 0.5s;
 
             a {
-                color : black;
+                color : black !important;
                 display: inline-block;
 
                 &:hover {
-                     color: black;
+                     color: black !important;
                      text-decoration: none;
                 }
 
