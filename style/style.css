@@ -15,7 +15,6 @@ body {
   font-weight: normal;
   margin-top: 6rem;
   height: 100%;
-  overflow: hidden;
 }
 
 body main {
@@ -31,6 +30,10 @@ body main .column-div {
   padding: 1rem;
 }
 
+body main .everything-down {
+  padding-top: 5.6rem;
+}
+
 body main .column-div-scroll {
   padding: 1rem;
   max-height: 12rem;
@@ -43,13 +46,58 @@ body main .bottom-line-corail {
 }
 
 body main .titre-citadelle {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 200;
+}
+
+body main .labeur-citadelle {
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+body main .legende-citadelle {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+body main .connexe {
+  top: -2.8rem;
 }
 
 body main .mot-citadelle {
   font-size: 1.3rem;
   font-weight: 100;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+body main .mot-citadelle a {
+  color: black;
+  display: inline-block;
+}
+
+body main .mot-citadelle a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+body main .mot-citadelle a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -50;
+  width: 0%;
+  height: 1.5rem;
+  background-color: #FEEF6F;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+
+body main .mot-citadelle a:hover:before {
+  width: 90%;
 }
 
 body main .sous-titre-citadelle {

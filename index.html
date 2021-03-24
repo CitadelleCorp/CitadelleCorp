@@ -10,94 +10,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="style/style.css"  rel="stylesheet">
 
-  <link rel="preload" href="medias/hexa_citadelle.mp4" as="video" type="video/mp4">
-  <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
-  <!-- <script src="/libraries/P5/p5.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
   <script src="scripts/P5sketch.js"></script>
+  <style>
+    body{
+      overflow: hidden;
+    }
+  </style>
 </head>
 
 <!-- <body class="body" style="background-color:#ffffff;"onselectstart="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status='Il est strictement interdit de copier les images sur ce site'; return true;"> -->
 <body id="body">
-    <!-- <div class="cursor">
-    <svg version="1.1" 
-         id="Calque_1" 
-         xmlns="http://www.w3.org/2000/svg" 
-         xmlns:xlink="http://www.w3.org/1999/xlink" 
-         x="0px" 
-         y="0px"
-         viewbox="0 0 25 21.95" 
-         style="enable-background:new 0 0 25 21.95;" 
-         xml:space="preserve">
-      <g>
-        <path class="st0" 
-           d="M18.2,21.95H6.8c-0.39,0-0.76-0.21-0.96-0.55l-5.7-9.87c-0.2-0.34-0.2-0.76,0-1.1l5.7-9.87
-          C6.04,0.21,6.41,0,6.8,0h11.4c0.39,0,0.76,0.21,0.96,0.55l5.7,9.87c0.2,0.34,0.2,0.76,0,1.1l-5.7,9.87
-          C18.96,21.74,18.59,21.95,18.2,21.95z M7.44,19.74h10.12l5.06-8.77l-5.06-8.77H7.44l-5.06,8.77L7.44,19.74z"/>
-      </g>
-    </svg>
-    </div> -->
-  
-  <!-- <div id="handle"
-       style="height:100%;
-              width:100%;
-              opacity: 0;
-              background-color: #ff6f61; 
-              position: absolute;
-              top: 50%; 
-              left: 50%;
-              transform: translate(-50%, -50%);
-              z-index: 2" > 
-  </div> -->
-
-
-      <!-- <video id="slideSource"
-             autoplay
-             muted
-             loop
-             style="position: fixed; 
-                    left: 50%; 
-                    top: 50%;
-                    width: 100%;
-                    transform: translate(-50%, -50%);
-                    background-size: cover;
-                    z-index: 0;">
-      
-      <source src="medias/hexa_citadelle.mp4"
-            type="video/webm">
-      <source src="videos/"
-          type="video/mp4">
-        
-      Sorry, your browser doesn't support embedded videos.
-      
-      </video> -->
-
-  
-  
-  <!-- <script src="cursor.js"></script> -->
-
-  
-  <!-- <script type="text/javascript">
-  /*
-    var slideSource = document.getElementById('canvas').onclick = function () {
-      slideSource.toggle('fade');
-      console.log("YES");
-    }
-    
-    document.getElementById('canvas').onclick = function () {
-      //slideSource.classList.toggle('fade');
-      document.getElementById('canvas').style.display = "none";
-    }
-    */
-    </script> -->
-  
   
   <header>
-       <!-- <div class="links">   -->
-    <!--<nav><ul><li>-->
-          <!-- <a href="AR.html">AR</a> -->
-    <!--</li></ul></nav>-->
-       <!-- </div> -->
+
        <nav class="navbar fixed-top navbar-light navbar-citadelle-bg">
         <a class="navbar-brand navbar-citadelle" href="#">Citadelle</a>
       </nav>
@@ -117,82 +43,74 @@
 
         </div>
         <div class="column-div col-md">
-          <p class="titre-citadelle bottom-line-corail">
-            Pseudo-sciences
+
+          <p class="mot-citadelle bottom-line-corail">
+            <a  href="/pages/vyvant.html">Vyvant</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Synergie
+            <a  href="/pages/">Autorité</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Autorité
+            <a  href="/pages/">Scientisme</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Scientisme
+            <a  href="/pages/">Synchronisation</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Synchronisation
+            <a  href="/pages/">Médias de masse</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Médias de masse
-          </p>
-          <p class="mot-citadelle bottom-line-corail">
-            Multimédia
+            <a  href="/pages/">Multimédia</a>
           </p>
           
         </div>
         <div class="column-div col-md">
-          <p class="titre-citadelle bottom-line-corail">
-            Vyvant
+         
+          <p class="mot-citadelle bottom-line-corail">
+            <a  href="/pages/">Pseudes</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Pseudes
+            <a  href="/pages/">Manipulation</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Manipulation
+            <a  href="/pages/">Expérience</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Expérience
+            <a  href="/pages/">Agentique</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Agentique
-          </p>
-          <p class="mot-citadelle bottom-line-corail">
-            Légitimité
+            <a  href="/pages/">Légitimité</a>
           </p>
         </div>
         
         <div class="column-div col-md">
-          <p class="titre-citadelle bottom-line-corail">
-            Modifier le vivant
+          
+          <p class="mot-citadelle bottom-line-corail">
+            <a  href="/pages/">Flux</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Flux
+            <a  href="/pages/">Émergence</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Émergence
+            <a  href="/pages/">Motif</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Motif
-          </p>
-          <p class="mot-citadelle bottom-line-corail">
-            Milieu
+            <a  href="/pages/">Milieu</a>
           </p>
         </div>
         <div class="column-div col-md">
-          <p class="titre-citadelle bottom-line-corail">
-            Créer le vivant
+          
+          <p class="mot-citadelle bottom-line-corail">
+            <a  href="/pages/">Protocole</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Protocole
+            <a  href="/pages/">Agent</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Agent
+            <a  href="/pages/">Milieu</a>
           </p>
           <p class="mot-citadelle bottom-line-corail">
-            Milieu
-          </p>
-          <p class="mot-citadelle bottom-line-corail">
-            Données
+            <a  href="/pages/">Données</a>
           </p>
         </div>
 
@@ -201,34 +119,12 @@
       </div>
     </div>
 
-    <!-- <div id="container">
-      <div class="index-mots">
-        <p>Synergie</p>
-        <p>Autorité</p>
-        <p>Scientisme</p>
-        <p>Synergie</p>
-        <p>Pseudes</p>
-        <p>Manipulation</p>
-        <p>Expérience</p>
-        <p>Agentique</p>
-        <p>Synchronisation</p>
-        <p>Flux</p>
-        <p>Légitimité</p>
-        <p>Émergence</p>
-        <p>Motif</p>
-        <p>Protocole</p>
-        <p>Milieu</p>
-        <p>Agent</p>
-        <p>Données</p>
-        <p>Multimédia</p>
-        <p>Médias de masse</p>
-      </div>  
-    </div> -->
-
-    <footer>
-
-    </footer>
+    
   </main>
+
+  <footer>
+
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

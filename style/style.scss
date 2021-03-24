@@ -1,6 +1,9 @@
 
 $corail : #FF6F61;
-$gritadelle : #EEEEEE;
+$gritadelle : #999999;
+$jauneCitadelle : #FEEF6F;
+
+
 
 
 .navbar-citadelle{
@@ -21,7 +24,7 @@ body {
 
     margin-top : 6rem;
     height: 100%;
-    overflow: hidden;
+    
 
     main {
         padding-top: 3rem;
@@ -32,6 +35,9 @@ body {
         .column-div{
             padding: 1rem;
 
+        }
+        .everything-down {
+            padding-top: 5.6rem;
         }
         .column-div-scroll{
             padding: 1rem;
@@ -44,13 +50,62 @@ body {
             border-width: 0.1rem;
         }
         .titre-citadelle {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             font-weight: 200;
         }
-        .mot-citadelle{
+        .labeur-citadelle{
+            font-size: 1.3rem;
+            font-weight: 200;
+            text-align: justify;
+        }
+        .legende-citadelle{
+            margin-top: 1rem;
             font-size: 1.3rem;
             font-weight: 100;
+            font-style: italic;
         }
+        .connexe {
+            top: -2.8rem;
+        }
+        
+        .mot-citadelle{
+
+            font-size: 1.3rem;
+            font-weight: 100;
+            transition: background-color 0.5s;
+
+            a {
+                color : black;
+                display: inline-block;
+
+                &:hover {
+                     color: black;
+                     text-decoration: none;
+                }
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    z-index: -50;
+                    width: 0%;
+                    height: 1.5rem;
+                    background-color: $jauneCitadelle;
+                    transition: width 0.4s;
+                }
+                  
+                &:hover:before {
+                width: 90%;
+                }
+
+
+
+            }
+            
+
+
+        }
+        
         .sous-titre-citadelle{
             font-size: 2rem;
             font-weight: 100;
@@ -75,22 +130,6 @@ body {
 
 
 
-
-@mixin breakpoint($point) {
-    @if $point == desktop {
-      @media (min-width: 70em) { @content ; }
-   }
-    @else if $point == laptop {
-      @media (min-width: 64em) { @content ; }
-   }
-    @else if $point == tablet {
-      @media (min-width: 50em) { @content ; }
-   }
-    @else if $point == mobileonly {
-      @media (max-width: 37.5em)  { @content ; }
- 
-   }
- }
 @font-face {
     font-family: Aileron2;
     src: url('../fonts/Aileron-Black.otf');
