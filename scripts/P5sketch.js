@@ -6,7 +6,7 @@ let objsNumDesktop = 800;
 let objsNumMobile = 170;
 let MAX;
 let pMAX;
-const palette = ["#ff6f61","#ff6f61","#ff6f61","#ff6f61"];
+const palette = ["#ff6f61"];
 
 let maximumSize;
 let maximumSizeDesktop = 0.4;
